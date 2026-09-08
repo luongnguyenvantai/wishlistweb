@@ -5,41 +5,27 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Wishlist cá nhân của Shepis - những món quà Lương Tài yêu thích."
-    >
+    <meta name="description" content="Wishlist cá nhân của Shepis - những món quà Lương Tài yêu thích.">
 
     <title>Wishlist của Shepis 🎁</title>
 
 
-    <!-- FONT -->
+    <!-- FONT: Nạp phông chữ có hỗ trợ tiếng Việt để nội dung hiển thị rõ ràng. -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
 
-    <!-- CSS -->
+    <!-- CSS: Nạp file định dạng giao diện và bố cục. -->
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -47,1834 +33,810 @@
 <body>
 
 
-<!-- =====================================================
+    <!-- =====================================================
      NHẠC NỀN
 ===================================================== -->
 
-<audio
-    id="backgroundMusic"
-    loop
-    preload="auto"
->
+    <audio id="backgroundMusic" loop preload="auto">
 
-    <source
-        src="music/LA BÀN.mp3"
-        type="audio/mpeg"
-    >
+        <source src="music/LA BÀN.mp3" type="audio/mpeg">
 
-</audio>
+    </audio>
 
 
 
 <!-- =====================================================
-     CỬA SỔ 01 — TRANG BÌA
+     TRANG BÌA — EDITORIAL / PERSONAL WISHLIST
 ===================================================== -->
+<section class="cover-screen" id="coverScreen">
 
-<section
-    class="cover-screen"
-    id="coverScreen"
->
+    <!-- Chữ nền khổng lồ tạo cảm giác poster/editorial -->
+    <div class="cover-bg-word">WISHLIST</div>
 
+    <!-- Các đường trang trí -->
+    <div class="cover-grid-line line-left"></div>
+    <div class="cover-grid-line line-right"></div>
+    <div class="cover-grid-line line-bottom"></div>
 
-    <div class="cover-grid"></div>
+    <!-- Góc trên -->
+    <header class="cover-header">
 
+        <div class="cover-brand">
+            <span class="brand-box">S</span>
 
-    <div class="cover-decoration decoration-one">
-        01
-    </div>
-
-    <div class="cover-decoration decoration-two">
-        WISHLIST
-    </div>
-
-
-    <div class="notebook">
-
-
-        <div class="notebook-top">
-
-            <span>
-                SỔ TAY CÁ NHÂN
-            </span>
-
-            <span>
-                2026
-            </span>
-
-        </div>
-
-
-        <div class="notebook-main">
-
-
-            <span class="cover-eyebrow">
-
-                🎁 DANH SÁCH NHỮNG THỨ LƯƠNG TÀI THÍCH
-
-            </span>
-
-
-            <h1>
-
-                Things
-                <em>Shepis</em>
-                would love.
-
-            </h1>
-
-
-            <div class="cover-line"></div>
-
-
-            <p class="cover-description">
-
-                Một góc nhỏ để lưu lại những thứ Shepis thích,
-                muốn có, muốn thử hoặc đơn giản là nhìn thấy
-                là thấy vui.
-
-            </p>
-
-
-            <p class="cover-small">
-
-                Sinh nhật · Thực tập · Tốt nghiệp · Lễ · Tết
-                · Một ngày bình thường · Hoặc chẳng vì lý do gì.
-
-            </p>
-
-
-            <button
-                class="start-button"
-                id="startButton"
-            >
-
-                <span>
-                    VÀO XEM
-                </span>
-
-                <strong>
-                    →
-                </strong>
-
-            </button>
-
-
-        </div>
-
-
-        <div class="notebook-bottom">
-
-            <span>
-                @itailwngg
-            </span>
-
-            <span>
-                SHEPIS
-            </span>
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     CỬA SỔ 02 — WISHLIST
-===================================================== -->
-
-<section
-    class="wishlist-screen"
-    id="wishlistScreen"
->
-
-
-    <!-- THANH ĐIỀU KHIỂN -->
-
-    <nav class="topbar">
-
-
-        <div class="brand">
-
-            <span class="brand-symbol">
-                S.
-            </span>
-
-            <span>
-                WISHLIST CỦA SHEPIS
-            </span>
-
-        </div>
-
-
-        <div class="topbar-actions">
-
-
-            <button
-                class="top-button"
-                id="musicButton"
-            >
-
-                <span id="musicIcon">
-                    ♪
-                </span>
-
-                <span id="musicText">
-                    Bật nhạc
-                </span>
-
-            </button>
-
-
-            <button
-                class="top-button"
-                id="infoButton"
-            >
-
-                ✦
-                Thông tin về Shepis
-
-            </button>
-
-
-        </div>
-
-    </nav>
-
-
-
-    <!-- HERO -->
-
-    <header class="wishlist-hero">
-
-
-        <div class="hero-left">
-
-
-            <span class="section-label">
-                01 — WISHLIST
-            </span>
-
-
-            <h2>
-
-                Nếu không biết
-                <em>tặng gì...</em>
-
-            </h2>
-
-
-        </div>
-
-
-        <div class="hero-right">
-
-            <p>
-
-                Tớ đã làm sẵn danh sách.
-                Thực tập, tốt nghiệp, sinh nhật, lễ, Tết, một ngày đẹp trời, hoặc chẳng vì lý do gì cả.
-                Cậu chỉ cần chọn một món,
-                hoặc tự chọn một thứ khác
-                nếu cậu thấy nó hợp với Lương Tài hơn.
-
-            </p>
-
-
-            <div class="hero-note">
-
-                <span>GỢI Ý</span>
-
-                <strong>
-                    Không cần đợi đến ngày ấy.
-                </strong>
-
+            <div>
+                <strong>SHEPIS</strong>
+                <small>PERSONAL ARCHIVE</small>
             </div>
-
         </div>
 
+        <div class="cover-year">
+            <span>VOL.</span>
+            <strong>26</strong>
+        </div>
 
     </header>
 
 
+    <!-- Nội dung chính -->
+    <div class="cover-content">
 
-    <!-- HƯỚNG DẪN -->
-
-    <div class="guide-box">
-
-
-        <div class="guide-icon">
-            ?
+        <div class="cover-meta">
+            <span>01 / 01</span>
+            <span>PRIVATE WISHLIST</span>
         </div>
 
 
-        <div>
+        <div class="cover-title-wrap">
 
-            <strong>
-                Cách xem wishlist
-            </strong>
+            <span class="cover-eyebrow">
+                🎁 DANH SÁCH NHỮNG THỨ LƯƠNG TÀI THÍCH
+            </span>
 
-            <p>
+            <h1>
+                Things
+                <em>Shepis</em>
+                would love.
+            </h1>
 
-                Bấm vào từng món để xem chi tiết.
-                Trên máy tính có thể kéo ngang danh sách.
-                Trên điện thoại chỉ cần cuộn xuống.
-                Muốn xem thông tin cá nhân của Shepis,
-                hãy bấm nút <b>“Thông tin về Shepis”</b> ở phía trên.
+        </div>
 
+
+        <div class="cover-description-wrap">
+
+            <div class="cover-accent"></div>
+
+            <p class="cover-description">
+                Một góc nhỏ để lưu lại những thứ Shepis thích,
+                muốn có, muốn thử hoặc đơn giản là nhìn thấy
+                là thấy vui.
             </p>
 
         </div>
 
 
-        <button
-            class="guide-close"
-            id="guideClose"
-        >
-            ×
-        </button>
+        <div class="cover-bottom-content">
 
-    </div>
-
-
-
-    <!-- BỘ LỌC -->
-
-    <div class="filter-wrapper">
-
-
-        <div class="filter-title">
-
-            <span>
-                LỌC DANH SÁCH
-            </span>
-
-            <small id="itemCount">
-                12 món
-            </small>
-
-        </div>
-
-
-        <div class="filters">
-
-
-            <button
-                class="filter active"
-                data-filter="all"
-            >
-                Tất cả
-            </button>
-
-
-            <button
-                class="filter"
-                data-filter="fashion"
-            >
-                👕 Cái quần cái áo
-            </button>
-
-            <button
-                class="filter"
-                data-filter="love"
-            >
-                💗 CỰC THÍCH
-            </button>
-
-            <button
-                class="filter"
-                data-filter="home"
-            >
-                🏠 Gia dụng
-            </button>
-            
-            
-            <button
-                class="filter"
-                data-filter="tech"
-            >
-                💻 Đồ chơi công nghệ
-            </button>
-
-
-            <button
-                class="filter"
-                data-filter="beauty"
-            >
-                🧴 Skin
-            </button>
-
-
-            <button
-                class="filter"
-                data-filter="meaningless"
-            >
-                🪨 Đồ vô tri
-            </button>
-
-
-            <button
-                class="filter"
-                data-filter="longtime"
-            >
-                ♡ Thích lâu rồi chưa mua
-            </button>
-
-
-            <button
-                class="filter"
-                data-filter="experience"
-            >
-                🍜 Trải nghiệm
-            </button>
-
-
-        </div>
-
-    </div>
-
-
-
-    <!-- ALBUM -->
-
-    <main class="album-container">
-
-
-        <div class="album-header">
-
-
-            <span>
-                DANH SÁCH QUÀ
-            </span>
-
-
-            <div class="album-direction">
-
-                <button
-                    id="previousButton"
-                    aria-label="Món trước"
-                >
-                    ←
-                </button>
-
-                <button
-                    id="nextButton"
-                    aria-label="Món tiếp theo"
-                >
-                    →
-                </button>
-
+            <div class="cover-occasions">
+                <span>SINH NHẬT</span>
+                <span>THỰC TẬP</span>
+                <span>TỐT NGHIỆP</span>
+                <span>LỄ · TẾT</span>
+                <span>HOẶC CHẲNG VÌ LÝ DO GÌ</span>
             </div>
 
-        </div>
 
+            <button class="start-button" id="startButton">
 
+                <span>VÀO XEM</span>
 
-        <div
-            class="album"
-            id="album"
-        >
-
-
-            <!-- =================================================
-                 CARD 01
-            ================================================== -->
-
-            <article
-                class="gift-card"
-                data-category="love"
-                data-name="Anh Bờ Vai ẤN BẢN KIM - Sếp Bình"
-                data-price="359.000 VNĐ"
-                data-priority="Rất thích"
-                data-icon="🔥"
-                data-description="Sở thích của người nghèo nhưng yêu âm nhạc 👩‍🎤📀🎧. Đĩa CD của anh Vương Bình đặc biệt là album này đã làm mình xao xuyến hơn 1 năm mà chưa có xiền để sắm :("
-                data-link="https://shop.hangdiathoidai.com/products/vuong-binh-anh-bo-vai-an-ban-kim-dia-cd"
-                data-image="album1.jpg"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="album1.jpg"
-                        alt="ANH BỜ VAI"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        01
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-
-                    <div class="card-meta">
-
-                        <span>
-                            ĐỒ CHƠI CÔNG NGHỆ
-                        </span>
-
-                        <span class="favorite">
-                            🔥 Rất thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Album ANH BỜ VAI
-                    </h3>
-
-
-                    <p>
-                        Album vật lý Anh bờ vai - Bính bè.
-                        Một món quà cho người ngẹn music.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            <400k
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 02 -->
-
-            <article
-                class="gift-card"
-                data-category="fashion"
-                data-name="Một chiếc áo đẹp"
-                data-price="500.000 – 2.000.000 VNĐ"
-                data-priority="Rất thích"
-                data-icon="🔥"
-                data-description="Áo phông, sơ mi, hoodie hoặc jacket. Không nhất thiết phải đắt. Quan trọng là đẹp, vừa người và hợp gu."
-                data-link="https://www.zara.com/"
-                data-image="images/gift-02.jpg"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-02.jpg"
-                        alt="Một chiếc áo đẹp"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        02
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            CÁI QUẦN CÁI ÁO
-                        </span>
-
-                        <span class="favorite">
-                            🔥 Rất thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Một chiếc áo đẹp
-                    </h3>
-
-
-                    <p>
-                        Không cần quá đắt.
-                        Đẹp, vừa người là được.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            500K – 2M
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 03 -->
-
-            <article
-                class="gift-card"
-                data-category="fashion"
-                data-name="Một đôi sneaker"
-                data-price="1.500.000 – 4.000.000 VNĐ"
-                data-priority="Thích"
-                data-icon="😎"
-                data-description="Một đôi sneaker sạch sẽ, dễ phối đồ và đi được hàng ngày. Càng dễ phối càng tốt."
-                data-link="https://www.nike.com/"
-                data-image="images/gift-03.JPG"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-03.JPG"
-                        alt="Một đôi sneaker"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        03
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            CÁI QUẦN CÁI ÁO
-                        </span>
-
-                        <span class="favorite">
-                            😎 Thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Một đôi sneaker
-                    </h3>
-
-
-                    <p>
-                        Một đôi đi hàng ngày,
-                        càng dễ phối càng tốt.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            1.5M – 4M
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 04 -->
-
-            <article
-                class="gift-card"
-                data-category="beauty"
-                data-name="Một chai nước hoa"
-                data-price="2.000.000 – 5.000.000 VNĐ"
-                data-priority="Rất thích"
-                data-icon="🔥"
-                data-description="Một mùi hương nam tính, sạch sẽ và sang một chút. Một chai nước hoa ngon luôn là một món quà tốt."
-                data-link="https://www.dior.com/"
-                data-image="images/gift-04.IPG"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-04.JPG"
-                        alt="Một chai nước hoa"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        04
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            DƯỠNG DA & CHĂM SÓC
-                        </span>
-
-                        <span class="favorite">
-                            🔥 Rất thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Một chai nước hoa
-                    </h3>
-
-
-                    <p>
-                        Thơm là được.
-                        Thơm lâu càng tốt.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            2M – 5M
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 05 -->
-
-            <article
-                class="gift-card"
-                data-category="tech"
-                data-name="Bàn phím cơ"
-                data-price="1.000.000 – 4.000.000 VNĐ"
-                data-priority="Thích"
-                data-icon="🤩"
-                data-description="Một chiếc mechanical keyboard đẹp cho góc máy tính. Ưu tiên layout gọn và cảm giác gõ sướng."
-                data-link="https://www.keychron.com/"
-                data-image="images/gift-05.jpg"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-05.jpg"
-                        alt="Bàn phím cơ"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        05
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            ĐỒ CHƠI CÔNG NGHỆ
-                        </span>
-
-                        <span class="favorite">
-                            🤩 Thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Bàn phím cơ
-                    </h3>
-
-
-                    <p>
-                        Một món đồ cho góc setup.
-                        Gõ sướng là điểm cộng.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            1M – 4M
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 06 -->
-
-            <article
-                class="gift-card"
-                data-category="beauty"
-                data-name="Skincare / Grooming"
-                data-price="300.000 – 2.000.000 VNĐ"
-                data-priority="Khá thích"
-                data-icon="✨"
-                data-description="Các sản phẩm skincare, grooming hoặc chăm sóc cá nhân. Miễn là giúp Lương Tài đẹp trai hơn."
-                data-link="https://www.sephora.com/"
-                data-image="images/gift-06.jpg"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-06.jpg"
-                        alt="Skincare"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        06
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            DƯỠNG DA
-                        </span>
-
-                        <span class="favorite">
-                            ✨ Khá thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Skincare / Grooming
-                    </h3>
-
-
-                    <p>
-                        Những thứ giúp tớ
-                        đẹp trai hơn.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            300K – 2M
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 07 -->
-
-            <article
-                class="gift-card"
-                data-category="experience"
-                data-name="Một bữa ăn thật ngon"
-                data-price="200.000 – 2.000.000 VNĐ"
-                data-priority="Rất thích"
-                data-icon="🤤"
-                data-description="Không nhất thiết phải là đồ vật. Một bữa ăn ngon, một buổi đi chơi hoặc một trải nghiệm đáng nhớ cũng là một món quà."
-                data-link="#"
-                data-image="images/gift-07.jpg"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-07.jpg"
-                        alt="Một bữa ăn thật ngon"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        07
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            TRẢI NGHIỆM
-                        </span>
-
-                        <span class="favorite">
-                            🤤 Rất thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Một bữa ăn thật ngon
-                    </h3>
-
-
-                    <p>
-                        Đồ ăn ngon đôi khi
-                        còn tuyệt hơn quà.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            200K – 2M
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 08 -->
-
-            <article
-                class="gift-card"
-                data-category="meaningless"
-                data-name="Một món đồ vô tri"
-                data-price="100.000 – 1.000.000 VNĐ"
-                data-priority="Khá thích"
-                data-icon="🗿"
-                data-description="Những món đồ chẳng thực sự cần thiết nhưng nhìn thấy lại thấy vui. Móc khóa, tượng nhỏ, đồ trang trí, đồ linh tinh..."
-                data-link="#"
-                data-image="images/gift-08.jpg"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-08.jpg"
-                        alt="Một món đồ vô tri"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        08
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            ĐỒ VÔ TRI
-                        </span>
-
-                        <span class="favorite">
-                            🗿 Khá thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Một món đồ vô tri
-                    </h3>
-
-
-                    <p>
-                        Không cần hữu ích.
-                        Vui là được.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            100K – 1M
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 09 -->
-
-            <article
-                class="gift-card"
-                data-category="home"
-                data-name="Một món đồ gia dụng xinh xinh"
-                data-price="200.000 – 2.000.000 VNĐ"
-                data-priority="Thích"
-                data-icon="🏠"
-                data-description="Những món đồ dùng hàng ngày làm cuộc sống dễ chịu hơn: cốc, đèn, hộp, đồ trang trí hoặc những thứ cho căn phòng."
-                data-link="#"
-                data-image="images/gift-09.jpg"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-09.jpg"
-                        alt="Đồ gia dụng"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        09
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            GIA DỤNG
-                        </span>
-
-                        <span class="favorite">
-                            🏠 Thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Một món đồ gia dụng xinh xinh
-                    </h3>
-
-
-                    <p>
-                        Dùng hàng ngày,
-                        nhìn cũng phải đẹp.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            200K – 2M
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 10 -->
-
-            <article
-                class="gift-card"
-                data-category="longtime"
-                data-name="Món đồ đã thích rất lâu"
-                data-price="500.000 – 5.000.000 VNĐ"
-                data-priority="Cực kỳ thích"
-                data-icon="💀"
-                data-description="Một món đồ Lương Tài đã để ý từ rất lâu nhưng cứ lần lữa chưa mua. Nếu nó xuất hiện ở đây thì khả năng cao là rất muốn có."
-                data-link="#"
-                data-image="images/gift-10.jpg"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-10.jpg"
-                        alt="Món đồ đã thích rất lâu"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        10
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            THÍCH LÂU RỒI CHƯA MUA
-                        </span>
-
-                        <span class="favorite">
-                            💀 Cực kỳ thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Món đồ đã thích rất lâu
-                    </h3>
-
-
-                    <p>
-                        Đã thích lâu rồi.
-                        Vẫn chưa chịu mua.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            500K – 5M
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 11 -->
-
-            <article
-                class="gift-card"
-                data-category="tech"
-                data-name="Một món đồ chơi công nghệ"
-                data-price="500.000 – 5.000.000 VNĐ"
-                data-priority="Rất thích"
-                data-icon="🤖"
-                data-description="Một món đồ công nghệ không nhất thiết phải cần thiết. Miễn là nhìn nó hay, nghịch nó vui và làm góc setup thú vị hơn."
-                data-link="#"
-                data-image="images/gift-11.jpg"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-11.jpg"
-                        alt="Đồ chơi công nghệ"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        11
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            ĐỒ CHƠI CÔNG NGHỆ
-                        </span>
-
-                        <span class="favorite">
-                            🤖 Rất thích
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Một món đồ chơi công nghệ
-                    </h3>
-
-
-                    <p>
-                        Không cần thiết.
-                        Nhưng rất muốn có.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            500K – 5M
-                        </strong>
-
-                        <span>
-                            VNĐ
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CARD 12 -->
-
-            <article
-                class="gift-card"
-                data-category="meaningless"
-                data-name="Một món quà bất ngờ"
-                data-price="Không giới hạn"
-                data-priority="DREAM"
-                data-icon="🎁"
-                data-description="Nếu món quà không nằm trong wishlist thì càng thú vị. Cậu muốn tặng gì cũng được. Quan trọng nhất vẫn là tấm lòng."
-                data-link="#"
-                data-image="images/gift-12.jpg"
-            >
-
-                <div class="card-image">
-
-                    <img
-                        src="images/gift-12.jpg"
-                        alt="Một món quà bất ngờ"
-                        loading="lazy"
-                    >
-
-                    <span class="card-number">
-                        12
-                    </span>
-
-                    <span class="card-open">
-                        Mở chi tiết →
-                    </span>
-
-                </div>
-
-
-                <div class="card-content">
-
-                    <div class="card-meta">
-
-                        <span>
-                            BẤT NGỜ
-                        </span>
-
-                        <span class="favorite">
-                            🎁 Món quà mơ ước
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        Một món quà bất ngờ
-                    </h3>
-
-
-                    <p>
-                        Không có trong danh sách
-                        mới càng thú vị.
-                    </p>
-
-
-                    <div class="card-price">
-
-                        <strong>
-                            ∞
-                        </strong>
-
-                        <span>
-                            KHÔNG GIỚI HẠN
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-
-        <div class="drag-hint">
-
-            <span>
-                ←
-            </span>
-
-            <p>
-                Kéo ngang để khám phá thêm
-            </p>
-
-            <span>
-                →
-            </span>
-
-        </div>
-
-
-    </main>
-
-
-
-    <!-- =====================================================
-         THÔNG TIN CÁ NHÂN
-    ===================================================== -->
-
-    <section class="personal-section">
-
-
-        <div class="personal-intro">
-
-
-            <span class="section-label">
-                02 — HƯỚNG DẪN TẶNG QUÀ
-            </span>
-
-
-            <h2>
-
-                Muốn tặng đúng gu?
-                <em>Xem thông tin này.</em>
-
-            </h2>
-
-
-            <p>
-
-                Không cần phải đoán.
-                Shepis đã để lại một vài thông tin
-                cơ bản để việc chọn quà dễ dàng hơn.
-
-            </p>
-
-
-            <button
-                class="personal-button"
-                id="openPersonal"
-            >
-
-                Xem thông tin về Shepis
-
-                <span>
-                    ↗
-                </span>
+                <strong>→</strong>
 
             </button>
 
-
         </div>
 
-
-    </section>
-
+    </div>
 
 
-    <!-- =====================================================
-         FINAL NOTE
-    ===================================================== -->
+    <!-- Thông tin dọc bên phải -->
+    <aside class="cover-side-info">
 
-    <section class="ending">
-
-
-        <span class="section-label">
-            03 — FINAL NOTE
+        <span class="side-vertical">
+            THINGS I LIKE / THINGS I WANT / THINGS I LOVE
         </span>
 
+        <span class="side-number">2026</span>
 
-        <div class="ending-symbol">
-            ♡
-        </div>
-
-
-        <h2>
-
-            Cảm ơn vì đã
-            <em>đồng hành.</em>
-
-        </h2>
+    </aside>
 
 
-        <p>
+    <!-- Footer bìa -->
+    <footer class="cover-footer">
 
-            Cảm ơn cậu đã ghé qua,
-            đã dành thời gian xem từng món,
-            và đặc biệt là đã nghĩ đến Lương Tài.
+        <span>@itailwngg</span>
 
-        </p>
+        <span>HÀ NỘI · VIỆT NAM</span>
 
-
-        <p>
-
-            Món quà có thể là một món đồ,
-            một bữa ăn, một chuyến đi,
-            một lời chúc hoặc đơn giản chỉ là
-            một ngày cùng nhau đi đâu đó.
-
-        </p>
-
-
-        <strong>
-
-            Không quan trọng món quà lớn hay nhỏ.
-            Quan trọng là người tặng. 🤝
-
-        </strong>
-
-
-        <div class="ending-signature">
-
-            — Shepis
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <span>
-            WISHLIST CỦA SHEPIS
-        </span>
-
-        <span>
-            LÀM BẰNG TÌNH YÊU VÀ NHỮNG QUYẾT ĐỊNH TÀI CHÍNH ĐÁNG NGỜ © 2026
-        </span>
+        <strong>SHEPIS</strong>
 
     </footer>
 
-
 </section>
 
-
-
-<!-- =====================================================
-     POPUP — THÔNG TIN CÁ NHÂN
+    <!-- =====================================================
+     CỬA SỔ 02 — WEBSITE CHÍNH
 ===================================================== -->
+    <main class="main-screen" id="mainScreen">
 
-<div
-    class="modal"
-    id="personalModal"
->
+        <!-- NHẠC: Thành phần âm thanh nền dùng chung cho nút bật/tắt nhạc. -->
+        <audio id="backgroundMusic" loop preload="auto">
+            <source src="music/wishlist.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- THANH ĐIỀU HƯỚNG: Chứa logo, mở hồ sơ, điều khiển nhạc và giao diện. -->
+        <nav class="top-nav">
+            <div class="nav-logo">
+                <span class="logo-mark">S</span>
+                <div>
+                    <strong>SHEPIS</strong>
+                    <small>WISHLIST</small>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="nav-button" id="profileButton">
+                    👤 <span class="desktop-only">Về Shepis</span>
+                </button>
+                <button class="nav-button" id="musicButton">
+                    ♫ <span class="desktop-only">Nhạc</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- GIỚI THIỆU: Phần tiêu đề chính và thống kê số món trong wishlist. -->
+        <section class="wishlist-hero">
+            <div class="hero-copy">
+                <span class="section-label">01 — WISHLIST</span>
+                <h2>
+                    Những thứ
+                    <em>Lương Tài thích.</em>
+                </h2>
+                <p>
+                    Không phải danh sách bắt buộc phải mua.
+                    Chỉ đơn giản là một nơi để lưu lại những
+                    thứ khiến Shepis vui khi nhìn thấy.
+                </p>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <strong id="productCount">08</strong>
+                    <span>MÓN ĐỒ</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>∞</strong>
+                    <span>KHẢ NĂNG</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- HƯỚNG DẪN NHANH: Giải thích cách xem, lọc, sắp xếp và thả tim. -->
+        <section class="guide">
+            <div class="guide-icon">✦</div>
+            <div class="guide-content">
+                <strong>Cách sử dụng wishlist</strong>
+                <p>
+                    Bấm vào một món để xem chi tiết.
+                    Dùng bộ lọc để tìm đúng loại đồ.
+                    Có thể sắp xếp theo giá hoặc độ yêu thích.
+                    Và tất nhiên... thích món nào thì thả ❤️ món đó.
+                </p>
+            </div>
+            <button class="guide-close" id="guideClose">×</button>
+        </section>
+
+        <!-- GIỚI THIỆU HỒ SƠ: Nút mở hồ sơ, không hiển thị thông tin cá nhân trực tiếp. -->
+        <section class="profile-teaser-new">
+            <div class="teaser-text">
+                <h3>Muốn tặng đúng gu? Xem thông tin này.</h3>
+                <p>Không cần phải đoán. Shepis đã để lại một vài thông tin cơ bản để việc chọn quà dễ dàng hơn.</p>
+            </div>
+            <button id="profileButtonTwo" class="teaser-btn">
+                Xem thông tin về Shepis ↗
+            </button>
+        </section>
+
+        <!-- LỌC + SẮP XẾP: Lọc theo danh mục hoặc sắp xếp theo giá và độ yêu thích. -->
+        <section class="controls">
+            <div class="filter-wrapper">
+                <span class="control-title">KHÁM PHÁ</span>
+                <div class="filters" id="filters">
+                    <button class="filter active" data-filter="all">Tất cả</button>
+                    <button class="filter" data-filter="fashion">👕 Quần áo</button>
+                    <button class="filter" data-filter="shoes">👟 Giày</button>
+                    <button class="filter" data-filter="tech">🎧 Công nghệ</button>
+                    <button class="filter" data-filter="skincare">🧴 Dưỡng da</button>
+                    <button class="filter" data-filter="stuff">🧸 Đồ vô tri</button>
+                    <button class="filter" data-filter="home">🏠 Gia dụng</button>
+                    <button class="filter" data-filter="experience">🍜 Trải nghiệm</button>
+                    <button class="filter" data-filter="longtime">💭 Thích lâu rồi</button>
+                </div>
+            </div>
+
+            <div class="sort-wrapper">
+                <span class="control-title">SẮP XẾP</span>
+                <select id="sortSelect">
+                    <option value="default">Mặc định</option>
+                    <option value="price-low">Giá thấp → cao</option>
+                    <option value="price-high">Giá cao → thấp</option>
+                    <option value="rating">Độ yêu thích</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- DANH SÁCH QUÀ: Các thẻ món quà có thể mở chi tiết và thả tim. -->
+        <section class="album-section">
+            <div class="album-head">
+                <div>
+                    <span class="section-label">02 — THE COLLECTION</span>
+                    <h3>
+                        Có gì trong
+                        <em>sổ?</em>
+                    </h3>
+                </div>
+                <span class="drag-note">← LƯỚT ĐỂ KHÁM PHÁ →</span>
+            </div>
+
+            <div class="album" id="album">
+            <!-- =====================================================
+                 CARD 01
+            ===================================================== -->
+            <article class="gift-card"
+                data-category="music"
+                data-name="ẤN BẢN KIM ANH BỜ VAI BÍNH BÈ"
+                data-price-min="300000"
+                data-price-max="400000"
+                data-price="359.000VNĐ"
+                data-rating="5"
+                data-priority="MUST HAVE"
+                data-description="Một nonfan của Bính bè rất lấy làm niềm vui khi được sở hữu album Anh Bờ Vai này, hehe thăng hoa âm nhạc số 1 lòng tôi."
+                data-link="https://shop.hangdiathoidai.com/products/vuong-binh-anh-bo-vai-an-ban-kim-dia-cd"
+                data-image="images/gift-01.JPG">
+
+                <div class="card-image">
+                    <img src="images/gift-01.JPG" alt="CD Anh Bờ Vai - Vương Bình" loading="lazy">
+                    <span class="card-number">01</span>
+                    <span class="card-category">ÂM NHẠC</span>
+
+                    <button class="like-button">
+                        <span class="heart">♡</span>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span>🎧 MUSIC</span>
+                        <span class="rating">💎💎💎💎💎</span>
+                    </div>
+
+                    <h4>ẤN BẢN KIM ANH BỜ VAI BÍNH BÈ</h4>
+
+                    <p>Album mà mình phải nghe đi nghe lại và muốn có nó ngay lập tức.</p>
+
+                    <div class="card-footer">
+                        <strong>359.000VNĐ</strong>
+                        <button class="detail-button">Xem →</button>
+                    </div>
+                </div>
+            </article>
 
 
-    <div
-        class="modal-overlay"
-        data-close-personal
-    ></div>
+            <!-- =====================================================
+                 CARD 02
+            ===================================================== -->
+            <article class="gift-card"
+                data-category="music"
+                data-name="Trang - Trong (Album số 3) - Đĩa CD"
+                data-price-min="400000"
+                data-price-max="600000"
+                data-price="486.000VNĐ"
+                data-rating="5"
+                data-priority="DREAM ITEM"
+                data-description=""
+                data-link="https://shop.hangdiathoidai.com/products/trang-trong-album-so-3-dia-cd"
+                data-image="images/gift-02.JPG">
+
+                <div class="card-image">
+                    <img src="images/gift-02.JPG" alt="CD Trong - Trang" loading="lazy">
+                    <span class="card-number">02</span>
+                    <span class="card-category">THỜI TRANG</span>
+
+                    <button class="like-button">
+                        <span class="heart">♡</span>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span>🎧 MUSIC</span>
+                        <span class="rating">💎💎💎💎💎</span>
+                    </div>
+
+                    <h4>Trang - Trong (Album số 3) - Đĩa CD</h4>
+
+                    <p>Trang - Trong (Album số 3) - Đĩa CD</p>
+
+                    <div class="card-footer">
+                        <strong>486.000VNĐ</strong>
+                        <button class="detail-button">Xem →</button>
+                    </div>
+                </div>
+            </article>
 
 
-    <div class="personal-modal">
+            <!-- =====================================================
+                 CARD 03
+            ===================================================== -->
+            <article class="gift-card"
+                data-category="stuff"
+                data-name="Hammer SOS"
+                data-price-min="50000"
+                data-price-max="100000"
+                data-price="50k - 100k"
+                data-rating="2"
+                data-priority="CASUAL"
+                data-description="Một cái móc khóa mà nó có đèn, có tua vít, phá cửa kính,... cái mà mình có thể mang theo bên mình bất cứ lúc nào!"
+                data-link="#"
+                data-image="images/gift-03.JPG">
+
+                <div class="card-image">
+                    <img src="images/gift-03.JPG" alt="Keyring SOS" loading="lazy">
+                    <span class="card-number">03</span>
+                    <span class="card-category">DÔ TRI DÔ GIÁC</span>
+
+                    <button class="like-button">
+                        <span class="heart">♡</span>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span>🐧 VÔ TRI</span>
+                        <span class="rating">💎💎</span>
+                    </div>
+
+                    <h4>Hammer SOS</h4>
+
+                    <p>Một thứ có thể cứu mình lúc khẩn cấp mà mình thấy cần nhưng chưa sở hữu.</p>
+
+                    <div class="card-footer">
+                        <strong>50k - 100k</strong>
+                        <button class="detail-button">Xem →</button>
+                    </div>
+                </div>
+            </article>
 
 
-        <button
-            class="modal-close"
-            data-close-personal
-        >
-            ×
-        </button>
+            <!-- =====================================================
+                 CARD 04
+            ===================================================== -->
+            <article class="gift-card"
+                data-category="fashion"
+                data-name="Mũ lưỡi trai MLB"
+                data-price-min="100000"
+                data-price-max="500000"
+                data-price="100k - 500k"
+                data-rating="4"
+                data-priority="NICE TO HAVE"
+                data-description="Mũ lưỡi trai ngoài công dụng che nắng còn làm ta trông… ngầu!!"
+                data-link="#"
+                data-image="images/gift-04.JPG">
+
+                <div class="card-image">
+                    <img src="images/gift-04.JPG" alt="Mũ giả ngầu" loading="lazy">
+                    <span class="card-number">04</span>
+                    <span class="card-category">THỜI TRANG</span>
+
+                    <button class="like-button">
+                        <span class="heart">♡</span>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span>👕 FASHION</span>
+                        <span class="rating">💎💎💎💎</span>
+                    </div>
+
+                    <h4>Mũ lưỡi trai MLB</h4>
+
+                    <p>Mũ lưỡi trai ngoài công dụng che nắng còn làm ta trông… ngầu!!</p>
+
+                    <div class="card-footer">
+                        <strong>100k - 500k</strong>
+                        <button class="detail-button">Xem →</button>
+                    </div>
+                </div>
+            </article>
 
 
-        <div class="personal-modal-head">
+            <!-- =====================================================
+                 CARD 05
+            ===================================================== -->
+            <article class="gift-card"
+                data-category="skincare"
+                data-name="Kem dưỡng ẩm COCOON thạch bí đao 100ml"
+                data-price-min="100000"
+                data-price-max="400000"
+                data-price="100k - 300k"
+                data-rating="4"
+                data-priority="LONG TERM"
+                data-description="Với sự kết hợp giữa chiết xuất bí đao thanh mát, 5α-AVOCUTA® được chưng cất phân tử từ dầu quả bơ và TECA™ trích ly từ rau má, thạch dưỡng bí đao với kết cấu mỏng nhẹ tan nhanh vào da giúp mang lại độ ẩm cân bằng, giảm lượng dầu thừa và cải thiện tình trạng mụn."
+                data-link="https://cocoonvietnam.com/san-pham/thach-bi-dao-100ml"
+                data-image="images/gift-05.JPG">
 
-            <span class="section-label">
-                HỒ SƠ CÁ NHÂN
-            </span>
+                <div class="card-image">
+                    <img src="images/gift-05.JPG" alt="Món quà mà có càng nhiều cáng thích" loading="lazy">
+                    <span class="card-number">05</span>
+                    <span class="card-category">CHĂM DA</span>
 
+                    <button class="like-button">
+                        <span class="heart">♡</span>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span>🚼 SKINCARE</span>
+                        <span class="rating">💎💎💎💎</span>
+                    </div>
+
+                    <h4>Kem dưỡng ẩm COCOON thạch bí đao 100ml</h4>
+
+                    <p>Với sự kết hợp giữa chiết xuất bí đao thanh mát, giúp mang lại độ ẩm cân bằng và cải thiện tình trạng da.</p>
+
+                    <div class="card-footer">
+                        <strong>100k - 300k</strong>
+                        <button class="detail-button">Xem →</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- =====================================================
+                 CARD 06
+            ===================================================== -->
+            <article class="gift-card"
+                data-category="stuff"
+                data-name="Sticker các loại"
+                data-price-min="0"
+                data-price-max="100000"
+                data-price="Dưới 100k"
+                data-rating="3"
+                data-priority="CASUAL"
+                data-description="Vì tôi là người chơi hệ dán, treo, móc mọi thứ có thể."
+                data-link="#"
+                data-image="images/gift-06.JPG">
+
+                <div class="card-image">
+                    <img src="images/gift-06.JPG" alt="Mấy cái đồ dễ thương" loading="lazy">
+                    <span class="card-number">06</span>
+                    <span class="card-category">DÔ TRI DÔ GIÁC</span>
+
+                    <button class="like-button">
+                        <span class="heart">♡</span>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span>🐧 VÔ TRI</span>
+                        <span class="rating">💎💎💎</span>
+                    </div>
+
+                    <h4>Sticker các loại</h4>
+
+                    <p>Từ dễ thương đến xấu xí nực cười, miễn nó dán được</p>
+
+                    <div class="card-footer">
+                        <strong>Dưới 100k</strong>
+                        <button class="detail-button">Xem →</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- =====================================================
+                 CARD 07
+            ===================================================== -->
+            <article class="gift-card"
+                data-category="fashion"
+                data-name="Áo sơ mi UNIQLO màu vàng linen"
+                data-price-min="100000"
+                data-price-max="500000"
+                data-price="489.000VNĐ"
+                data-rating="5"
+                data-priority="DREAM ITEM"
+                data-description="Cái áo sơ mi mà lần nào vào Uniqlo cũng phải thử mặc, dù có 100c vẫn thích, đặc biệt là màu vànggg!!"
+                data-link="https://www.uniqlo.com/vn/vi/products/E455957-000/01?colorDisplayCode=38&sizeDisplayCode=004"
+                data-image="images/gift-07.JPG">
+
+                <div class="card-image">
+                    <img src="images/gift-07.JPG" alt="Áo sơ mi vàng" loading="lazy">
+                    <span class="card-number">07</span>
+                    <span class="card-category">ÁO SƠ MI</span>
+
+                    <button class="like-button">
+                        <span class="heart">♡</span>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span>👕 FASHION</span>
+                        <span class="rating">💎💎💎💎💎</span>
+                    </div>
+
+                    <h4>Áo sơ mi UNIQLO màu vàng linen</h4>
+
+                    <p>Cái áo lần nào qua UNI cũng phải mặc thử, nó basic mà nó luxury.</p>
+
+                    <div class="card-footer">
+                        <strong>489.000VNĐ</strong>
+                        <button class="detail-button">Xem →</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- =====================================================
+                 CARD 08
+            ===================================================== -->
+            <article class="gift-card"
+                data-category="book"
+                data-name="Quyển Album Ảnh"
+                data-price-min="10000"
+                data-price-max="50000"
+                data-price="10k - 50k"
+                data-rating="3"
+                data-priority="LONG TERM"
+                data-description="Một quyển Album để ảnh là nơi mà mình lưu giữ thật nhiều những khoảnh khắc trong đời được 'vật lý hóa'. Do mình có thói quen lưu trữ ảnh đã in ra (size cỡ 13x18cm, 10x15cm)."
+                data-link="#"
+                data-image="images/gift-08.JPG">
+
+                <div class="card-image">
+                    <img src="images/gift-08.JPG" alt="Quyển Album ảnh 10*15" loading="lazy">
+                    <span class="card-number">08</span>
+                    <span class="card-category">ALBUM SÁCH ẢNH</span>
+
+                    <button class="like-button">
+                        <span class="heart">♡</span>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span>📚 BOOK</span>
+                        <span class="rating">💎💎💎</span>
+                    </div>
+
+                    <h4>Quyển Album Ảnh</h4>
+
+                    <p>Quyển Album cho ký ức, size cỡ 13x18cm, 10x15cm</p>
+
+                    <div class="card-footer">
+                        <strong>10k - 50k</strong>
+                        <button class="detail-button">Xem →</button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- =====================================================
+                 CARD 21
+            ===================================================== -->
+            <article class="gift-card"
+                data-category="longtime"
+                data-name="Một món quà bất ngờ"
+                data-price-min="0"
+                data-price-max="999999999"
+                data-price="Không giới hạn"
+                data-rating="5"
+                data-priority="DREAM ITEM"
+                data-description="Nếu món quà không nằm trong wishlist thì càng thú vị. Cậu muốn tặng gì cũng được. Quan trọng là tấm lòng."
+                data-link="#"
+                data-image="images/gift-21.JPG">
+
+                <div class="card-image">
+                    <img src="images/gift-21.JPG" alt="Món quà bất ngờ" loading="lazy">
+                    <span class="card-number">21</span>
+                    <span class="card-category">BẤT NGỜ</span>
+
+                    <button class="like-button">
+                        <span class="heart">♡</span>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-meta">
+                        <span>🎁 SURPRISE</span>
+                        <span class="rating">💎💎💎💎💎</span>
+                    </div>
+
+                    <h4>Một món quà bất ngờ</h4>
+
+                    <p>Không có trong danh sách mới càng thú vị.</p>
+
+                    <div class="card-footer">
+                        <strong>∞</strong>
+                        <button class="detail-button">Xem →</button>
+                    </div>
+                </div>
+            </article>
+
+
+            </div>
+
+            <div class="album-scroll-hint">
+                <span></span>
+                <p>LƯỚT NGANG ĐỂ XEM THÊM</p>
+            </div>
+        </section>
+
+        <!-- PHẦN KẾT: Lời nhắn cuối trang và nút xem lại từ đầu. -->
+        <section class="final-note">
+            <div class="final-symbol">♡</div>
+            <span class="section-label">03 — CUỐI SỔ</span>
             <h2>
-                Một chút về
-                <em>Shepis.</em>
+                Cảm ơn cậu đã
+                <em>đồng hành.</em>
             </h2>
-
-            <p>
-                Lương Tài hay còn gọi <em>Shepis</em>
-                Vì là một chú cừu (tộc Shaun)
-                Thông tin tham khảo để chọn quà dễ hơn.
+            <p>Dù cậu chỉ lướt qua, thả một chiếc ❤️, xem thử vài món đồ hoặc thực sự chọn một món trong danh sách...
             </p>
+            <p>Shepis đều cảm ơn. Wishlist này không phải một danh sách bắt buộc phải mua. Nó chỉ là một góc nhỏ để
+                Lương Tài lưu lại những thứ mình thích.</p>
+            <strong>Còn món quà tuyệt nhất vẫn là việc cậu nhớ đến tui. ♡</strong>
+            <button class="restart-button" id="restartButton">↺ XEM LẠI TỪ ĐẦU</button>
+        </section>
 
+        <!-- CHÂN TRANG: Thông tin nhận diện và bản quyền của wishlist. -->
+        <footer>
+            <span>SHEPIS / WISHLIST</span>
+            <span>MADE WITH QUESTIONABLE FINANCIAL DECISIONS © 2026</span>
+        </footer>
+    </main>
+
+        <script>
+        function openWishlist() {
+            document.body.classList.add("wishlist-open");
+        }
+    </script>
+    
+    <!-- CỬA SỔ HỒ SƠ: Hiển thị thông tin Shepis khi người dùng bấm nút hồ sơ. -->
+    <div class="modal" id="profileModal">
+        <div class="modal-backdrop"></div>
+        <div class="profile-modal">
+            <button class="modal-close" data-close="profileModal">×</button>
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="images/avatar.jpg" alt="Ảnh đại diện của Shepis">
+                </div>
+                <div>
+                    <span class="section-label">HỒ SƠ CÁ NHÂN</span>
+                    <h2>Shepis</h2>
+                    <p>Hay còn được biết đến với cái tên Lương Tài.</p>
+                </div>
+            </div>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <span>📏 CHIỀU CAO</span>
+                    <strong>1m73</strong>
+                </div>
+                <div class="profile-item">
+                    <span>⚖️ CÂN NẶNG</span>
+                    <strong>65 KG</strong>
+                </div>
+                <div class="profile-item">
+                    <span>👕 SIZE QUẦN ÁO</span>
+                    <strong>M / L</strong>
+                </div>
+                <div class="profile-item">
+                    <span>👟 SIZE GIÀY</span>
+                    <strong>42</strong>
+                </div>
+                <div class="profile-item">
+                    <span>🧴 LOẠI DA</span>
+                    <strong>DA DẦU</strong>
+                </div>
+                <div class="profile-item">
+                    <span>🌱 MỆNH</span>
+                    <strong>MỘC</strong>
+                </div>
+            </div>
+            <div class="profile-interests">
+                <span class="section-label">SHEPIS THÍCH</span>
+                <div class="interest-tags">
+                    <span>🎧 Nghe nhạc</span>
+                    <span>👕 Thời trang</span>
+                    <span>💻 Công nghệ</span>
+                    <span>📸 Hình ảnh</span>
+                    <span>✈️ Đi đây đi đó</span>
+                    <span>☕ Những thứ đẹp đẹp</span>
+                    <span>🎮 Đồ chơi công nghệ</span>
+                    <span>🧸 Đồ vô tri</span>
+                </div>
+            </div>
+            <div class="profile-note">
+                <span>GHI CHÚ</span>
+                <p>Nếu không biết tặng gì thì cứ nhìn wishlist. Nếu vẫn không biết thì... hỏi Shepis. Tui không khó tính
+                    đâu. :)</p>
+            </div>
         </div>
-
-
-        <div class="personal-grid">
-
-
-            <div class="personal-item">
-
-                <span>
-                    CHIỀU CAO
-                </span>
-
-                <strong>
-                    1m73
-                </strong>
-
-            </div>
-
-
-            <div class="personal-item">
-
-                <span>
-                    CÂN NẶNG
-                </span>
-
-                <strong>
-                    65kg
-                </strong>
-
-            </div>
-
-
-            <div class="personal-item">
-
-                <span>
-                    SIZE QUẦN ÁO
-                </span>
-
-                <strong>
-                    L / tùy form
-                </strong>
-
-            </div>
-
-
-            <div class="personal-item">
-
-                <span>
-                    SIZE GIÀY
-                </span>
-
-                <strong>
-                    42
-                </strong>
-
-            </div>
-
-
-            <div class="personal-item">
-
-                <span>
-                    LOẠI DA
-                </span>
-
-                <strong>
-                    Da dầu
-                </strong>
-
-            </div>
-
-
-            <div class="personal-item">
-
-                <span>
-                    MỆNH
-                </span>
-
-                <strong>
-                    Mộc 🌿
-                </strong>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="interest-box">
-
-
-            <span>
-                SỞ THÍCH
-            </span>
-
-
-            <div class="interest-list">
-
-                <span>
-                    🎧 Nghe nhạc
-                </span>
-
-                <span>
-                    👕 Thời trang
-                </span>
-
-                <span>
-                    💻 Công nghệ
-                </span>
-
-                <span>
-                    📷 Hình ảnh
-                </span>
-
-                <span>
-                    ✍️ Thể thao
-                </span>
-
-                <span>
-                    🎨 Thiết kế
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="personal-note">
-
-            <span>
-                💡 MẸO
-            </span>
-
-            <p>
-
-                Nếu không chắc size hoặc không biết chọn món nào,
-                một bữa ăn ngon, một trải nghiệm hoặc một món đồ
-                bất ngờ vẫn luôn được chào đón. Chắc vui ngất mất!!
-
-            </p>
-
-        </div>
-
-
     </div>
 
-</div>
-
-
-
-<!-- =====================================================
-     POPUP — CHI TIẾT SẢN PHẨM
-===================================================== -->
-
-<div
-    class="modal"
-    id="giftModal"
->
-
-
-    <div
-        class="modal-overlay"
-        id="giftOverlay"
-    ></div>
-
-
-    <div class="gift-modal">
-
-
-        <button
-            class="modal-close"
-            id="modalClose"
-        >
-            ×
-        </button>
-
-
-        <div class="modal-image">
-
-            <img
-                id="modalImage"
-                src=""
-                alt=""
-            >
-
-        </div>
-
-
-        <div class="modal-content">
-
-
-            <span
-                class="modal-category"
-                id="modalCategory"
-            >
-                ĐỒ CHƠI CÔNG NGHỆ
-            </span>
-
-
-            <h2 id="modalName">
-                Tên món quà
-            </h2>
-
-
-            <p id="modalDescription">
-                Mô tả món quà
-            </p>
-
-
-            <div class="modal-info">
-
-
-                <div>
-
-                    <span>
-                        KHOẢNG GIÁ
-                    </span>
-
-                    <strong id="modalPrice">
-                        0 VNĐ
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        MỨC ĐỘ YÊU THÍCH
-                    </span>
-
-                    <strong id="modalPriority">
-                        🔥 Rất thích
-                    </strong>
-
-                </div>
-
-
+    <!-- CỬA SỔ CHI TIẾT: Hiển thị ảnh, mô tả, giá, mức yêu thích và liên kết sản phẩm. -->
+    <div class="modal" id="giftModal">
+        <div class="modal-backdrop"></div>
+        <div class="gift-modal">
+            <button class="modal-close" data-close="giftModal">×</button>
+            <div class="gift-modal-image">
+                <img id="modalImage" src="" alt="">
             </div>
-
-
-            <a
-                href="#"
-                id="modalLink"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="product-link"
-            >
-
-                Xem sản phẩm
-                ↗
-
-            </a>
-
-
+            <div class="gift-modal-content">
+                <span class="modal-category" id="modalCategory">CÔNG NGHỆ</span>
+                <h2 id="modalName">Tên sản phẩm</h2>
+                <div class="modal-rating" id="modalRating">🔥🔥🔥🔥🔥</div>
+                <p id="modalDescription">Mô tả sản phẩm.</p>
+                <div class="modal-info-grid">
+                    <div>
+                        <span>KHOẢNG GIÁ</span>
+                        <strong id="modalPrice">0 ₫</strong>
+                    </div>
+                    <div>
+                        <span>ĐỘ YÊU THÍCH</span>
+                        <strong id="modalPriority">CỰC KỲ MUỐN</strong>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-like" id="modalLike">
+                        ♡ <span>Thích món này</span>
+                    </button>
+                    <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer" class="product-link">
+                        🛒 Xem sản phẩm
+                    </a>
+                </div>
+                <div class="gift-message">
+                    <span>🎁 GỢI Ý NHỎ</span>
+                    <p>Không nhất thiết phải mua đúng sản phẩm này. Nếu cậu tìm được món tương tự nhưng hợp hơn thì
+                        Shepis vẫn vui.</p>
+                </div>
+            </div>
         </div>
-
     </div>
 
-</div>
+    <!-- THÔNG BÁO NHẠC: Hiển thị trạng thái bật/tắt nhạc trong thời gian ngắn. -->
+    <div class="music-toast" id="musicToast">
+        <span>♫</span>
+        <div>
+            <strong>Nhạc đang phát</strong>
+            <small>Wishlist của Shepis</small>
+        </div>
+    </div>
 
+    <!-- VỀ ĐẦU TRANG: Nút xuất hiện khi người dùng cuộn xuống. -->
+    <button class="back-top" id="backTop">↑</button>
 
-
-<!-- JAVASCRIPT -->
-
-<script src="script.js"></script>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>
