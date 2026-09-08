@@ -2233,3 +2233,44 @@ body.wishlist-open {
     position: relative;
     z-index: 20;
 }
+
+/* =====================================================
+   MOBILE - GIFT MODAL SCROLL FIX
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .modal {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .gift-modal {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        height: auto;
+        max-height: none;
+    }
+
+    .gift-modal-image {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    .gift-modal-image img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .gift-modal-content {
+        width: 100%;
+        padding: 30px 22px 40px;
+        flex-shrink: 0;
+    }
+}
