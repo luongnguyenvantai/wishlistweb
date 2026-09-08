@@ -823,7 +823,7 @@ footer {
 .gift-modal {
     width: min(900px, 100%);
     max-height: 90vh;
-    overflow: hidden;
+    overflow-y: auto;
     position: relative;
     z-index: 2;
     border: 1px solid rgba(255, 255, 255, 0.14);
@@ -834,7 +834,6 @@ footer {
     transform: translateY(25px) scale(0.97);
     transition: 0.4s ease;
 }
-
 
 .modal.active .profile-modal,
 .modal.active .gift-modal {
@@ -1171,31 +1170,10 @@ footer {
 /* =====================================================
    MOBILE
 ===================================================== */
-
 @media (max-width: 768px) {
-
-    /* =================================================
-       GLOBAL MOBILE
-    ================================================= */
-
-    html {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
     .desktop-only {
         display: none;
     }
-
-
-    /* =================================================
-       HERO
-    ================================================= */
 
     .wishlist-hero {
         width: 90%;
@@ -1214,23 +1192,12 @@ footer {
 
     .hero-stats {
         margin-top: 35px;
-        gap: 25px;
     }
-
-
-    /* =================================================
-       GUIDE
-    ================================================= */
 
     .guide {
         width: 90%;
         align-items: flex-start;
     }
-
-
-    /* =================================================
-       CONTROLS
-    ================================================= */
 
     .controls {
         width: 90%;
@@ -1245,11 +1212,6 @@ footer {
     .sort-wrapper select {
         width: 100%;
     }
-
-
-    /* =================================================
-       ALBUM
-    ================================================= */
 
     .album-section {
         padding: 30px 5% 70px;
@@ -1274,15 +1236,12 @@ footer {
         grid-template-rows: none;
         grid-auto-flow: row;
         grid-auto-columns: auto;
-
         gap: 10px;
-
         overflow-x: hidden;
         overflow-y: visible;
     }
 
     .gift-card {
-        min-width: 0;
         border-radius: 16px;
     }
 
@@ -1364,11 +1323,6 @@ footer {
         display: none;
     }
 
-
-    /* =================================================
-       FINAL
-    ================================================= */
-
     .final-note {
         margin: 80px auto 100px;
     }
@@ -1377,41 +1331,13 @@ footer {
         font-size: 48px;
     }
 
-
-    /* =================================================
-       FOOTER
-    ================================================= */
-
     footer {
         display: block;
         line-height: 2;
     }
 
-
-    /* =================================================
-       PROFILE MODAL
-    ================================================= */
-
     .profile-modal {
-
-        width: 100%;
-        max-width: 100%;
-
-        height: 100%;
-        max-height: 100%;
-
-        margin: 0;
-
-        padding: 25px 18px 50px;
-
-        border-radius: 0;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        -webkit-overflow-scrolling: touch;
-
-        overscroll-behavior-y: contain;
+        padding: 25px 18px;
     }
 
     .profile-header {
@@ -1436,300 +1362,46 @@ footer {
         padding: 14px;
     }
 
-
-    /* =================================================
-       GIFT MODAL
-       
-       QUAN TRỌNG:
-       - modal không scroll
-       - gift-modal không scroll
-       - content mới là vùng scroll
-    ================================================= */
-
-    .modal {
-
-        position: fixed;
-
-        inset: 0;
-
-        width: 100%;
-        height: 100dvh;
-
-        padding: 0;
-
-        display: flex;
-
-        align-items: flex-start;
-        justify-content: center;
-
-        overflow: hidden;
-
-        overscroll-behavior: none;
-
-        -webkit-overflow-scrolling: auto;
+    .gift-modal {
+        display: block;
+        max-height: 92vh;
     }
-
-
-    .modal.active {
-
-        display: flex;
-
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-
-    /* =================================================
-       MODAL CONTENT
-    ================================================= */
-
-    .modal > .gift-modal {
-
-        position: relative;
-
-        width: 100%;
-        max-width: 100%;
-
-        height: 100dvh;
-        max-height: 100dvh;
-
-        margin: 0;
-
-        display: flex;
-        flex-direction: column;
-
-        overflow: hidden;
-
-        border-radius: 0;
-
-        transform: none;
-    }
-
-
-    /* =================================================
-       GIFT IMAGE
-       
-       Ảnh giữ nguyên tỷ lệ.
-       KHÔNG crop.
-    ================================================= */
 
     .gift-modal-image {
-
-        position: relative;
-
-        width: 100%;
-
-        height: auto;
+        height: 250px;
         min-height: 0;
-
-        flex: 0 0 auto;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        overflow: hidden;
-
-        background: #f5f5f5;
     }
-
-
-    .gift-modal-image img {
-
-        display: block;
-
-        width: 100%;
-        height: auto;
-
-        max-width: 100%;
-        max-height: none;
-
-        object-fit: contain;
-        object-position: center;
-
-        margin: 0;
-    }
-
-
-    /* =================================================
-       GIFT INFORMATION
-       
-       ĐÂY LÀ VÙNG DUY NHẤT ĐƯỢC CUỘN
-    ================================================= */
 
     .gift-modal-content {
-
-        position: relative;
-
-        width: 100%;
-
-        flex: 1 1 auto;
-
-        min-height: 0;
-
-        padding: 25px 20px 60px;
-
-        overflow-x: hidden;
-        overflow-y: auto;
-
-        -webkit-overflow-scrolling: touch;
-
-        overscroll-behavior-y: contain;
-
-        touch-action: pan-y;
-
-        scrollbar-width: none;
+        padding: 25px 20px 30px;
     }
-
-    .gift-modal-content::-webkit-scrollbar {
-        display: none;
-    }
-
-
-    /* =================================================
-       GIFT TITLE
-    ================================================= */
 
     .gift-modal-content h2 {
-
-        margin-top: 12px;
-
         font-size: 35px;
-
-        line-height: 1.05;
-
-        word-break: break-word;
-        overflow-wrap: anywhere;
     }
-
-
-    /* =================================================
-       DESCRIPTION
-    ================================================= */
-
-    .gift-modal-content > p {
-
-        margin-top: 20px;
-
-        line-height: 1.7;
-
-        word-break: break-word;
-        overflow-wrap: anywhere;
-    }
-
-
-    /* =================================================
-       INFO GRID
-    ================================================= */
 
     .modal-info-grid {
-
-        margin-top: 25px;
-
         grid-template-columns: 1fr;
-
-        gap: 10px;
     }
 
-
-    /* =================================================
-       ACTION BUTTONS
-    ================================================= */
-
     .modal-actions {
-
-        margin-top: 20px;
-
-        display: flex;
-        flex-direction: column;
-
-        gap: 8px;
+        display: block;
     }
 
     .modal-like,
     .product-link {
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
+        display: block;
         width: 100%;
-
-        min-height: 48px;
-
-        flex: none;
     }
 
     .product-link {
-        margin-top: 0;
+        margin-top: 8px;
     }
-
-
-    /* =================================================
-       MESSAGE
-    ================================================= */
-
-    .gift-message {
-
-        margin-top: 25px;
-
-        margin-bottom: 20px;
-    }
-
-
-    /* =================================================
-       MODAL CLOSE
-       
-       Luôn nằm trên ảnh.
-    ================================================= */
-
-    .modal-close {
-
-        position: fixed;
-
-        top: 12px;
-        right: 12px;
-
-        width: 42px;
-        height: 42px;
-
-        z-index: 10000;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border-radius: 50%;
-
-        background: rgba(0, 0, 0, .6);
-
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-
-        touch-action: manipulation;
-
-        -webkit-tap-highlight-color: transparent;
-    }
-
-
-    /* =================================================
-       MUSIC TOAST
-    ================================================= */
 
     .music-toast {
         left: 12px;
-        right: 12px;
         bottom: 12px;
-
-        max-width: calc(100% - 24px);
     }
-
-
-    /* =================================================
-       BACK TOP
-    ================================================= */
 
     .back-top {
         right: 15px;
@@ -1737,13 +1409,7 @@ footer {
     }
 }
 
-
-/* =====================================================
-   VERY SMALL PHONE
-===================================================== */
-
 @media (max-width: 400px) {
-
     .card-image {
         height: 155px;
     }
@@ -1759,17 +1425,7 @@ footer {
     .rating {
         font-size: 6px;
     }
-
-    .gift-modal-content {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .gift-modal-content h2 {
-        font-size: 31px;
-    }
 }
-
 
 /* =====================================================
    TRANG BÌA — SHEPIS EDITORIAL
@@ -2582,434 +2238,39 @@ body.wishlist-open {
    MOBILE - GIFT MODAL SCROLL FIX
 ===================================================== */
 
-/* =========================================================
-   MOBILE — MODAL / GIFT CARD / SCROLL
-   ========================================================= */
-
 @media (max-width: 768px) {
 
-    /* -----------------------------------------------------
-       1. KHÓA TRANG NỀN KHI MODAL MỞ
-       ----------------------------------------------------- */
-
-    body.modal-open {
-        overflow: hidden;
-        touch-action: none;
-    }
-
-
-    /* -----------------------------------------------------
-       2. MODAL — LUÔN BẮT ĐẦU TỪ ĐẦU MÀN HÌNH
-       ----------------------------------------------------- */
-
     .modal {
-        position: fixed;
-        inset: 0;
-
-        width: 100%;
-        height: 100dvh;
-
-        margin: 0;
-        padding: 0;
-
-        display: none;
-
-        overflow: hidden;
-
-        z-index: 9999;
-
-        align-items: flex-start;
-        justify-content: center;
-
+        overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
-
-    .modal.active {
-        display: flex;
-
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-
-    /* -----------------------------------------------------
-       3. BACKDROP
-       ----------------------------------------------------- */
-
-    .modal-backdrop {
-        position: absolute;
-        inset: 0;
-
-        width: 100%;
-        height: 100%;
-
-        background: rgba(0, 0, 0, .72);
-
-        z-index: 0;
-    }
-
-
-    /* -----------------------------------------------------
-       4. MODAL CONTENT
-       Không cho modal-content tự cuộn
-       ----------------------------------------------------- */
-
-    .modal-content {
-        position: relative;
-
-        z-index: 1;
-
-        width: 100%;
-        max-width: 100%;
-
-        height: 100dvh;
-        min-height: 0;
-        max-height: none;
-
-        margin: 0;
-        padding: 0;
-
-        border-radius: 0;
-
-        overflow: hidden;
-
-        display: flex;
-        flex-direction: column;
-
-        transform: none;
-    }
-
-
-    /* -----------------------------------------------------
-       5. NÚT ĐÓNG
-       ----------------------------------------------------- */
-
-    .modal-close {
-        position: fixed;
-
-        top: 14px;
-        right: 14px;
-
-        width: 42px;
-        height: 42px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        z-index: 10001;
-
-        border-radius: 50%;
-
-        background: rgba(0, 0, 0, .65);
-
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-
-        color: #fff;
-
-        border: 1px solid rgba(255, 255, 255, .18);
-
-        cursor: pointer;
-
-        touch-action: manipulation;
-
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    .modal-close:active {
-        transform: scale(.92);
-    }
-
-
-    /* =====================================================
-       GIFT MODAL
-       ===================================================== */
 
     .gift-modal {
-
-        position: relative;
-
-        width: 100%;
-        height: 100%;
-
-        min-height: 0;
-
-        margin: 0;
-        padding: 0;
-
         display: flex;
         flex-direction: column;
-
-        overflow: hidden;
-
-        background: #fff;
-
-        border-radius: 0;
+        overflow: visible;
+        height: auto;
+        max-height: none;
     }
-
-
-    /* -----------------------------------------------------
-       6. KHU VỰC ẢNH
-       ----------------------------------------------------- */
 
     .gift-modal-image {
-
-        position: relative;
-
-        flex: 0 0 auto;
-
         width: 100%;
-
-        height: auto;
         min-height: 0;
-        max-height: none;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
+        height: auto;
+        flex-shrink: 0;
         overflow: hidden;
-
-        background: #f5f5f5;
     }
-
 
     .gift-modal-image img {
-
-        display: block;
-
         width: 100%;
         height: auto;
-
-        max-width: 100%;
         max-height: none;
-
         object-fit: contain;
-
-        object-position: center;
-
-        margin: 0;
-        padding: 0;
     }
-
-
-    /* -----------------------------------------------------
-       7. PHẦN THÔNG TIN
-       
-       Đây mới là vùng CUỘN trên điện thoại.
-       Không cho ảnh + content cùng tranh nhau scroll.
-       ----------------------------------------------------- */
 
     .gift-modal-content {
-
-        position: relative;
-
-        flex: 1 1 auto;
-
         width: 100%;
-
-        min-height: 0;
-
-        padding: 24px 20px 50px;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        -webkit-overflow-scrolling: touch;
-
-        overscroll-behavior-y: contain;
-
-        touch-action: pan-y;
-
-        box-sizing: border-box;
-    }
-
-
-    /* -----------------------------------------------------
-       8. NỘI DUNG BÊN TRONG KHÔNG ĐƯỢC ÉP CAO
-       ----------------------------------------------------- */
-
-    .gift-modal-content > * {
-        max-width: 100%;
-    }
-
-
-    /* -----------------------------------------------------
-       9. TIÊU ĐỀ
-       ----------------------------------------------------- */
-
-    .gift-modal-content h2,
-    .gift-modal-content h3,
-    .gift-modal-content h4 {
-
-        margin-top: 0;
-
-        line-height: 1.25;
-
-        word-break: break-word;
-    }
-
-
-    /* -----------------------------------------------------
-       10. MÔ TẢ
-       ----------------------------------------------------- */
-
-    .gift-modal-content p {
-
-        line-height: 1.7;
-
-        word-break: break-word;
-
-        margin-bottom: 18px;
-    }
-
-
-    /* -----------------------------------------------------
-       11. NÚT / LINK
-       ----------------------------------------------------- */
-
-    .gift-modal-content button,
-    .gift-modal-content a {
-
-        touch-action: manipulation;
-
-        -webkit-tap-highlight-color: transparent;
-    }
-
-
-    /* -----------------------------------------------------
-       12. KHU VỰC CUỐI CONTENT
-       ----------------------------------------------------- */
-
-    .gift-modal-content::after {
-
-        content: "";
-
-        display: block;
-
-        height: 30px;
-
+        padding: 30px 22px 40px;
         flex-shrink: 0;
-    }
-
-
-    /* =====================================================
-       PROFILE MODAL
-       ===================================================== */
-
-    .profile-modal {
-
-        width: 100%;
-        height: 100%;
-
-        max-width: 100%;
-        max-height: 100%;
-
-        margin: 0;
-
-        border-radius: 0;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        -webkit-overflow-scrolling: touch;
-    }
-
-
-    /* =====================================================
-       TOUCH / CLICK
-       ===================================================== */
-
-    button,
-    a,
-    .gift-card,
-    .detail-button,
-    .like-button,
-    .modal-close {
-
-        -webkit-tap-highlight-color: transparent;
-    }
-
-
-    button,
-    a {
-
-        touch-action: manipulation;
-    }
-
-
-    /* =====================================================
-       CARD TRONG TRANG CHÍNH
-       Không thay đổi tỷ lệ preview
-       ===================================================== */
-
-    .gift-card {
-
-        cursor: pointer;
-
-        touch-action: manipulation;
-
-        -webkit-tap-highlight-color: transparent;
-    }
-
-
-    /* -----------------------------------------------------
-       Không cho thao tác nhấn card làm chọn text
-       ----------------------------------------------------- */
-
-    .gift-card,
-    .detail-button,
-    .like-button {
-
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-
-    /* =====================================================
-       13. TRƯỜNG HỢP MÀN HÌNH RẤT THẤP
-       ===================================================== */
-
-    @media (max-height: 650px) {
-
-        .gift-modal-content {
-
-            padding-top: 20px;
-            padding-bottom: 40px;
-        }
-
-        .modal-close {
-
-            top: 10px;
-            right: 10px;
-
-            width: 38px;
-            height: 38px;
-        }
-    }
-
-
-    /* =====================================================
-       14. ĐIỆN THOẠI RẤT HẸP
-       ===================================================== */
-
-    @media (max-width: 400px) {
-
-        .gift-modal-content {
-
-            padding-left: 16px;
-            padding-right: 16px;
-            padding-bottom: 45px;
-        }
-
-        .modal-close {
-
-            width: 38px;
-            height: 38px;
-
-            top: 10px;
-            right: 10px;
-        }
     }
 }
